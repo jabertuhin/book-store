@@ -2,8 +2,9 @@ package com.jaber2946.bookstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication(scanBasePackages = {"com.jaber2946.controller"})
+@SpringBootApplication
 public class BookStoreApplication {
 
     public static void main(String[] args) {

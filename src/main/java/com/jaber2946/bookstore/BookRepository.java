@@ -1,4 +1,4 @@
-package com.jaber2946.controller;
+package com.jaber2946.bookstore;
 
 import org.springframework.data.repository.CrudRepository;
 

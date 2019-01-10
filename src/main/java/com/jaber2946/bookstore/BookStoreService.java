@@ -1,4 +1,4 @@
-package com.jaber2946.controller;
+package com.jaber2946.bookstore;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

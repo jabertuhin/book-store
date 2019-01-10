@@ -1,4 +1,4 @@
-package com.jaber2946.controller;
+package com.jaber2946.bookstore;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +16,7 @@ public class BookStoreController {
 
     @RequestMapping("/")
     public String helloWorld(){
-        return "Hello World";
+        return "<h1>Hello World<h2>";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/books")

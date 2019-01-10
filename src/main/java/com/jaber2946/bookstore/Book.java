@@ -1,4 +1,4 @@
-package com.jaber2946.controller;
+package com.jaber2946.bookstore;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +14,10 @@ public class Book {
     private String author;
     private String publisher;
     private String publishDate;
+
+    public Book(){
+
+    }
 
     public Book(String name, String author, String publisher, String publishDate) {
         this.name = name;
