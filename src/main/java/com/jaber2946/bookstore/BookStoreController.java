@@ -1,12 +1,10 @@
 package com.jaber2946.bookstore;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class BookStoreController {
@@ -29,4 +27,18 @@ public class BookStoreController {
         bookStoreService.addBook(book);
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = "/books/{bookName}")
+    public Optional<Book> getBook(@PathVariable String bookName){
+        return bookStoreService.getBook(bookName);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/books/{bookName}")
+    public void deleteBook(@PathVariable String bookName){
+        bookStoreService.deleteBook(bookName);
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/books/author/{authorName}")
+    public Optional<Book> getBookByAuthor(@PathVariable String authorName){
+        return bookStoreService.getBookByAuthor(authorName);
+    }
 }
