@@ -39,4 +39,8 @@ public class BookStoreService {
 
         return bookRepository.findByAuthor(authorName);
     }
+
+    public void updateBook(Book book) {
+        bookRepository.save(book);
+    }
 }

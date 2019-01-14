@@ -41,4 +41,10 @@ public class BookStoreController {
     public Optional<Book> getBookByAuthor(@PathVariable String authorName){
         return bookStoreService.getBookByAuthor(authorName);
     }
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/books/{id}")
+    public void updateBook(@RequestBody Book book,@PathVariable String id){
+        bookStoreService.updateBook(book);
+    }
+
 }
