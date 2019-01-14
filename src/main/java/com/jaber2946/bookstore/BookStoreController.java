@@ -12,11 +12,6 @@ public class BookStoreController {
     @Autowired
     private BookStoreService bookStoreService;
 
-    @RequestMapping("/")
-    public String helloWorld(){
-        return "<h1>Hello World<h2>";
-    }
-
     @RequestMapping(method = RequestMethod.GET, value = "/books")
     public List<Book> getAllBooks(){
         return bookStoreService.getAllbooks();
